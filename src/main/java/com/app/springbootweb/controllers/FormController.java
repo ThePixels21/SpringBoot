@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.app.springbootweb.models.entity.Usuario;
 
+import jakarta.validation.Valid;
+
 @Controller
 @SessionAttributes("usuario")
 public class FormController {
@@ -22,7 +24,7 @@ public class FormController {
     }
 
     @PostMapping("/form")
-    public String procesar(Usuario usuario, Model model){
+    public String procesar(@Valid Usuario usuario, Model model){
         model.addAttribute("titulo", "Resultado formulario");
         return "resultado";
     }
