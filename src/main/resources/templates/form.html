@@ -8,18 +8,16 @@
 </head>
 <body>
     <h1 th:text="${titulo}"></h1>
-    <form action="" method="post">
-        <input type="text">
-        <input for=""> </label>
+    <form th:action="@{/form}" th:object="${usuario}" method="post">
+        <input for="">id</label>
         <input type="text" id="id" name="id">
-        <input for=""> </label>
+        <input for="">username</label>
         <input type="text" id="username" name="username">
-        <input for=""> </label>
-        <input type="text" id="password" name="password">
-        <input for=""> </label>
-        <input type="text" id="email" name="email">
-        <input for=""> </label>
-        <button type="submit">Resultado</button>
+        <input for="">password</label>
+        <input type="password" id="password" name="password">
+        <input for="">email</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Enviar</button>
         </form>
 </body>
 </html>
