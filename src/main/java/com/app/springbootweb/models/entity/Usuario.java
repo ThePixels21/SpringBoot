@@ -1,17 +1,17 @@
 package com.app.springbootweb.models.entity;
 
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 
 public class Usuario {
-    @NotEmpty
+    @NotEmpty(message = "El id no puede estar vacío")
     private String id;
-    @NotEmpty
+    @NotEmpty(message = "El usuario no puede estar vacío")
     private String username;
-    @NotEmpty
+    @Size(min = 3, max = 8, message = "Mínimo 3 caracteres, máximos 8")
     private String password;
-    @NotEmpty
+    @NotEmpty(message = "El email no puede estar vacío")
     private String email;
-    @NotEmpty
     private String fechaNacimiento;
 
     public String getId() {
